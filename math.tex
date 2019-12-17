@@ -1,0 +1,37 @@
+%% LyX 2.3.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{amsmath}
+\usepackage{babel}
+\begin{document}
+\title{Derivation of a method for finding the solenoidal part of a vector
+field}
+\author{Duane Byer}
+\date{2019-12-17}
+
+\maketitle
+Given a vector field $F$, we wish to find vector fields $A$ and
+$D$ that satisfy the following constraints.
+
+\begin{align*}
+F & =A+D\\
+\nabla\cdot A & =0\\
+\nabla\times D & =0
+\end{align*}
+
+The field $D$ can be expressed as the gradient of a scalar potential
+$\phi$. Using this:
+
+\begin{align*}
+\nabla\times\left(\nabla\times F\right) & =\nabla^{2}F-\nabla\left(\nabla\cdot F\right)\\
+ & =\nabla^{2}\left(A+D\right)-\nabla\left(\nabla\cdot\left(A+D\right)\right)\\
+ & =\nabla^{2}A+\nabla^{2}D-\nabla\left(\nabla\cdot D\right)\\
+ & =\nabla^{2}A+\nabla^{2}\left(\nabla\phi\right)-\nabla\left(\nabla^{2}\phi\right)\\
+ & =\nabla^{2}A
+\end{align*}
+
+This is just Poisson's equation, and it can be solved using a variety
+of methods, including Gauss-Seidel.
+\end{document}
