@@ -38,3 +38,6 @@ the lattice. By looking at the quantity `curl (curl F)` (see the provided file
 `math.tex`), an expression for `A` directly in terms of `F` can be found,
 without any intermediate potential necessary.
 
+One downside of using this method is that there is a lot of effective viscosity
+added to the simulation.
+
